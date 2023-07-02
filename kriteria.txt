@@ -9,3 +9,9 @@ SONGS :
 -GET
 -PUT
 -DELETE
+
+
+
+// Create Postgre Table
+-npm run migrate create "create table albums" 
+-npm run migrate create "create table songs" 

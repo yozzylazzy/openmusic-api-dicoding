@@ -94,6 +94,7 @@ class SongsHandler {
     try {
       this._validator.validateSongPayload(request.payload);
       const { id } = request.params;
+
       await this._service.editSongById(id, request.payload);
       return {
         status: 'success',

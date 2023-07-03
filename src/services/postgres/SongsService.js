@@ -51,10 +51,8 @@ class SongsService {
     };
     const result = await this._pool.query(query);
     if (!result.rows.length) {
-      console.log('Gagal  lagu. Id tidak ditemukan');
       throw new NotFoundError('Gagal memperbarui lagu. Id tidak ditemukan');
     }
-    console.log('Finished Update');
   }
 
   async deleteSongById(id) {

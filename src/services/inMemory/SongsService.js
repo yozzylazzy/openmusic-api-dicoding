@@ -19,7 +19,7 @@ class SongsService {
     this._song.push(newSong);
     const isSuccess = this._song.filter((song) => song.id === id).length > 0;
     if (!isSuccess) {
-      throw new InvariantError('Song gagal ditambahkan');
+      throw new InvariantError('Lagu gagal ditambahkan');
     }
     return id;
   }
@@ -31,7 +31,7 @@ class SongsService {
   getSongById(id) {
     const song = this._song.filter((n) => n.id === id)[0];
     if (!song) {
-      throw new NotFoundError('Catatan tidak ditemukan');
+      throw new NotFoundError('Lagu tidak ditemukan');
     }
     return song;
   }
@@ -41,7 +41,7 @@ class SongsService {
   }) {
     const index = this._song.findIndex((song) => song.id === id);
     if (index === -1) {
-      throw new NotFoundError('Gagal memperbarui song. Id tidak ditemukan');
+      throw new NotFoundError('Gagal memperbarui lagu. Id tidak ditemukan');
     }
 
     this._song[index] = {
@@ -58,7 +58,7 @@ class SongsService {
   deleteSongById(id) {
     const index = this._song.findIndex((song) => song.id === id);
     if (index === -1) {
-      throw new NotFoundError('Catatan gagal dihapus. Id tidak ditemukan');
+      throw new NotFoundError('Lagu gagal dihapus. Id tidak ditemukan');
     }
     this._song.splice(index, 1);
   }

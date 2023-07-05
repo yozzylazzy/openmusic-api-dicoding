@@ -25,8 +25,12 @@ class SongsService {
     return result.rows[0].id;
   }
 
-  async getSongs() {
-    const result = await this._pool.query('SELECT id, title, performer FROM songs');
+  async getSongs(title = '', performer = '') {
+    const query = {
+      text: 'SELECT id, title, performer FROM songs WHERE title LIKE $1 OR performer LIKE $2',
+      values: [`%${title}%`, `%${performer}%`],
+    };
+    const result = await this._pool.query(query);
     return result.rows.map(mapDBSongsToModel);
   }
 
@@ -40,6 +44,15 @@ class SongsService {
       throw new NotFoundError('Lagu tidak ditemukan');
     }
     return result.rows.map(mapDBSongsToModel)[0];
+  }
+
+  async getSongsByAlbumId(albumId) {
+    const query = {
+      text: 'SELECT id, title, genre, performer FROM songs WHERE album_id = $1',
+      values: [albumId],
+    };
+    const result = await this._pool.query(query);
+    return result.rows.map(mapDBSongsToModel);
   }
 
   async editSongById(id, {

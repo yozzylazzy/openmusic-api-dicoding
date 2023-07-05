@@ -1,6 +1,6 @@
-const autoBind = require("auto-bind");
-
 /* eslint-disable no-underscore-dangle */
+const autoBind = require('auto-bind');
+
 class AlbumsHandler {
   constructor(albumsService, songsService, validator) {
     this._albumsService = albumsService;
@@ -8,10 +8,6 @@ class AlbumsHandler {
     this._validator = validator;
 
     autoBind(this);
-    // this.postAlbumHandler = this.postAlbumHandler.bind(this);
-    // this.getAlbumByIdHandler = this.getAlbumByIdHandler.bind(this);
-    // this.putAlbumByIdHandler = this.putAlbumByIdHandler.bind(this);
-    // this.deleteAlbumByIdHandler = this.deleteAlbumByIdHandler.bind(this);
   }
 
   async postAlbumHandler(request, h) {

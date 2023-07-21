@@ -17,6 +17,22 @@ UPDATE V2 For Submisi Dicoding 2 Fundamental Back-End :
 - PLaylists
 - JOIN Table
 - Collaboration
+- Activities
+- Revisi Code Sesuai Masukan dan Menyelesaikan Optional Task di v1 dan v2
 
 Command to Reset DB :
 TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities
+
+Command Backup:
+TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities
+SELECT s.id, s.title, s.performer FROM playlistsongs p
+      JOIN songs s ON s.id = p.song_id WHERE p.id = 'playlist-j8FjIOa-MwmNqJZO'
+
+SELECT * FROM playlists
+
+SELECT s.id, s.title, s.performer FROM playlists p
+      JOIN playlistsongs ps ON ps.playlist_id = p.id
+      JOIN songs s ON s.id = ps.song_id
+      WHERE p.id = 'playlist-j8FjIOa-MwmNqJZO'
+
+SELECT * FROM pgmigrations

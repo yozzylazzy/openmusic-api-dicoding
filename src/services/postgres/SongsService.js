@@ -11,7 +11,7 @@ class SongsService {
   }
 
   async addSong({
-    title, year, genre, performer, duration = null, albumId = null,
+    title, year, genre, performer, duration, albumId,
   }) {
     const id = `song-${nanoid(16)}`;
     const query = {
@@ -27,8 +27,8 @@ class SongsService {
 
   async getSongs(title = '', performer = '') {
     const query = {
-      text: 'SELECT id, title, performer FROM songs WHERE title LIKE $1 OR performer LIKE $2',
-      values: [`%${title}%`, `%${performer}%`],
+      text: 'SELECT id, title, performer FROM songs WHERE LOWER(title) LIKE $1 AND LOWER(performer) LIKE $2',
+      values: [`%${title.toLowerCase()}%`, `%${performer.toLowerCase()}%`],
     };
     const result = await this._pool.query(query);
     return result.rows;
@@ -56,7 +56,7 @@ class SongsService {
   }
 
   async editSongById(id, {
-    title, year, performer, genre, duration = null, albumId = null,
+    title, year, performer, genre, duration, albumId,
   }) {
     const query = {
       text: 'UPDATE songs SET title = $1, year = $2, performer = $3, genre = $4, duration = $5, album_id=$6 WHERE id = $7 RETURNING id',

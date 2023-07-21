@@ -27,7 +27,8 @@ class PlaylistSongActivitiesService {
         FROM playlist_song_activities psa
         LEFT JOIN users u ON (u.id = psa.user_id)
         LEFT JOIN songs s ON (s.id = psa.song_id)
-        WHERE psa.playlist_id = $1`,
+        WHERE psa.playlist_id = $1
+        ORDER BY psa.time`,
       values: [playlistId],
     };
     const result = await this._pool.query(query);

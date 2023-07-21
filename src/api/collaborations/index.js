@@ -4,8 +4,12 @@ const routes = require('./routes');
 module.exports = {
   name: 'collaborations',
   version: '1.0.0',
-  register: async (server, { service, playlistService, validator }) => {
-    const collaborationsHandler = new CollaborationsHandler(service, playlistService, validator);
+  register: async (server, {
+    usersService, playlistsService,
+    collaborationsService, validator,
+  }) => {
+    // eslint-disable-next-line max-len
+    const collaborationsHandler = new CollaborationsHandler(usersService, playlistsService, collaborationsService, validator);
     server.route(routes(collaborationsHandler));
   },
 };

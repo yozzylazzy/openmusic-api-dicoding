@@ -26,10 +26,10 @@ class PlaylistsService {
 
   async getPlaylists(owner) {
     const query = {
-      text: `SELECT playlists.id, playlists.name, users.username 
-      FROM playlists INNER JOIN users ON users.id = playlists.owner 
-      INNER JOIN collaborations ON collaborations.playlist_id = playlists.id
-      WHERE playlists.owner = $1 OR collaborations.user_id = $1`,
+      text: `SELECT p.id, p.name, u.username 
+      FROM playlists p INNER JOIN users u ON (u.id = p.owner)
+      LEFT JOIN collaborations c ON (c.playlist_id = p.id)
+      WHERE (p.owner = $1) OR (c.user_id = $1)`,
       values: [owner],
     };
     const result = await this._pool.query(query);
@@ -61,34 +61,34 @@ class PlaylistsService {
 
   async getSongsFromPlaylist(playlistId) {
     const query = {
-      text: `SELECT A.id, A.name, B.username 
-        FROM playlists A 
-        LEFT JOIN users B ON B.id = a.owner
-        WHERE A.id = $1`,
+      text: `SELECT p.id, p.name, u.username
+        FROM playlists p LEFT JOIN users u ON (u.id = p.owner)
+        WHERE p.id = $1`,
       values: [playlistId],
     };
-
     let result = await this._pool.query(query);
     if (!result.rows.length) {
       throw new NotFoundError('Playlist tidak ditemukan');
     }
     const playlist = result.rows[0];
     const querySong = {
-      text: `SELECT s.id, s.title, s.performer FROM playlists p
-      JOIN playlistsongs ps ON ps.playlist_id = p.id
-      JOIN songs s ON s.id = ps.song_id
-        WHERE p.id = $1`,
+      text: `SELECT s.id, s.title, s.performer 
+      FROM playlists p
+      JOIN playlistsongs ps ON (ps.playlist_id = p.id)
+      JOIN songs s ON (s.id = ps.song_id)
+      WHERE p.id = $1`,
       values: [playlistId],
     };
-
     result = await this._pool.query(querySong);
     playlist.songs = result.rows;
-    return playlist;
+    return {
+      ...playlist,
+    };
   }
 
   async deleteSongFromPlaylist(playlistId, songId) {
     const query = {
-      text: 'DELETE FROM playlistsongs WHERE playlist_id = $1 AND song_id = $2 RETURNING id',
+      text: 'DELETE FROM playlistsongs WHERE (playlist_id = $1) AND (song_id = $2) RETURNING id',
       values: [playlistId, songId],
     };
     const result = await this._pool.query(query);

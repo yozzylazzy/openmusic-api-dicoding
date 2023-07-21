@@ -16,18 +16,18 @@ class PlaylistSongActivitiesService {
     };
     const result = await this._pool.query(query);
     if (!result.rows.length) {
-      throw new InvariantError('Playlist song activity gagal ditambahkan');
+      throw new InvariantError('Aktivitas Playlist Song gagal ditambahkan');
     }
     return result.rows[0].id;
   }
 
   async getPlaylistSongActivities(playlistId) {
     const query = {
-      text: `SELECT B.username, C.title, A.action, A.time FROM playlist_song_activities A
-        LEFT JOIN users B ON B.id = A.user_id
-        LEFT JOIN songs C ON C.id = A.song_id
-        WHERE A.playlist_id = $1
-        ORDER BY A.action`,
+      text: `SELECT u.username, s.title, psa.action, psa.time
+        FROM playlist_song_activities psa
+        LEFT JOIN users u ON (u.id = psa.user_id)
+        LEFT JOIN songs s ON (s.id = psa.song_id)
+        WHERE psa.playlist_id = $1`,
       values: [playlistId],
     };
     const result = await this._pool.query(query);

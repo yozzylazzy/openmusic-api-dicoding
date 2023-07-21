@@ -13,7 +13,6 @@ class AlbumsHandler {
   async postAlbumHandler(request, h) {
     this._validator.validateAlbumPayload(request.payload);
     const albumId = await this._albumsService.addAlbum(request.payload);
-
     const response = h.response({
       status: 'success',
       message: 'Album berhasil ditambahkan',
@@ -40,7 +39,6 @@ class AlbumsHandler {
   async putAlbumByIdHandler(request) {
     this._validator.validateAlbumPayload(request.payload);
     const { id } = request.params;
-
     await this._albumsService.editAlbumById(id, request.payload);
     return {
       status: 'success',

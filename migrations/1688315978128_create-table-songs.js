@@ -1,7 +1,7 @@
 exports.up = (pgm) => {
   pgm.createTable('songs', {
     id: {
-      type: 'VARCHAR(24)',
+      type: 'VARCHAR(50)',
       primaryKey: true,
     },
     title: {
@@ -25,7 +25,7 @@ exports.up = (pgm) => {
       notNull: false,
     },
     album_id: {
-      type: 'VARCHAR(24)',
+      type: 'VARCHAR(50)',
       notNull: false,
     },
   });

@@ -12,12 +12,10 @@ class PlaylistSongActivitiesHandler {
   async getPlaylistSongActivities(request) {
     const { id } = request.params;
     const { id: credentialId } = request.auth.credentials;
-
     await this._playlistsService.verifyPlaylistOwner(id, credentialId);
     const {
       playlistId, activities,
     } = await this._playlistSingsActivitesService.getPlaylistSongActivities(id);
-
     return {
       status: 'success',
       data: {

@@ -16,7 +16,6 @@ class PlaylistsHandler {
     const { id: credentialId } = request.auth.credentials;
     const { name } = request.payload;
     const playlistId = await this._playlistsService.addPlaylist({ name, owner: credentialId });
-
     const response = h.response({
       status: 'success',
       message: 'Playlist berhasil ditambahkan',
@@ -58,11 +57,9 @@ class PlaylistsHandler {
     await this._playlistsService.verifyPlaylistAccess(playlistId, credentialId);
     await this._songsService.getSongById(songId);
     await this._playlistsService.addSongToPlaylist(playlistId, songId);
-
-    const action = 'add';
     const time = new Date().toISOString();
-    await this._playlistSongActivitiesService.addPlaylistSongActivities(playlistId, songId, credentialId, action, time);
-
+    // eslint-disable-next-line max-len
+    await this._playlistSongActivitiesService.addPlaylistSongActivities(playlistId, songId, credentialId, 'add', time);
     const response = h.response({
       status: 'success',
       message: 'Lagu berhasil ditambahkan ke playlist',
@@ -87,17 +84,12 @@ class PlaylistsHandler {
   async deleteSongFromPlaylistHandler(request) {
     const { playlistId } = request.params;
     const { songId } = request.payload;
-    // const { id } = request.params;
     const { id: credentialId } = request.auth.credentials;
     await this._playlistsService.verifyPlaylistAccess(playlistId, credentialId);
     await this._playlistsService.deleteSongFromPlaylist(playlistId, songId);
-
-    const action = 'delete';
     const time = new Date().toISOString();
-    await this._playlistSongActivitiesService.addPlaylistSongActivities(
-      playlistId, songId, credentialId, action, time,
-    );
-
+    // eslint-disable-next-line max-len
+    await this._playlistSongActivitiesService.addPlaylistSongActivities(playlistId, songId, credentialId, 'delete', time);
     return {
       status: 'success',
       message: 'Lagu berhasil dihapus dari playlist',

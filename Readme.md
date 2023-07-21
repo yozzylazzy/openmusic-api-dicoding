@@ -17,3 +17,6 @@ UPDATE V2 For Submisi Dicoding 2 Fundamental Back-End :
 - PLaylists
 - JOIN Table
 - Collaboration
+
+Command to Reset DB :
+TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities

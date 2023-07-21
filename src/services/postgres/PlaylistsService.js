@@ -58,13 +58,29 @@ class PlaylistsService {
 
   async getSongsFromPlaylist(playlistId) {
     const query = {
-      text: `SELECT songs.id, songs.title, songs.performer FROM playlistsongs 
-      INNER JOIN songs ON songs.id = playlistsongs.song_id 
-      WHERE playlistsongs.playlist_id = $1`,
+      text: `SELECT A.id, A.name, B.username 
+        FROM playlists A 
+        LEFT JOIN users B ON B.id = a.owner
+        WHERE A.id = $1`,
       values: [playlistId],
     };
-    const result = await this._pool.query(query);
-    return result.rows;
+
+    let result = await this._pool.query(query);
+    if (!result.rows.length) {
+      throw new NotFoundError('Playlist tidak ditemukan');
+    }
+    const playlist = result.rows[0];
+    const querySong = {
+      text: `SELECT s.id, s.title, s.performer FROM playlists p
+      JOIN playlistsongs ps ON ps.playlist_id = p.id
+      JOIN songs s ON s.id = ps.song_id
+        WHERE p.id = $1`,
+      values: [playlistId],
+    };
+
+    result = await this._pool.query(querySong);
+    playlist.songs = result.rows;
+    return playlist;
   }
 
   async deleteSongFromPlaylist(playlistId, songId) {
@@ -85,7 +101,7 @@ class PlaylistsService {
     };
     const result = await this._pool.query(query);
     if (!result.rows.length) {
-      throw new InvariantError('Playlist tidak ditemukan');
+      throw new NotFoundError('Playlist tidak ditemukan');
     }
     const playlist = result.rows[0];
     if (playlist.owner !== owner) {

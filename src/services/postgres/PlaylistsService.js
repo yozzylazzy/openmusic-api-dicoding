@@ -43,7 +43,7 @@ class PlaylistsService {
   }
 
   async addSongToPlaylist(playlistId, songId) {
-    const id = `playlist-song-${nanoid(16)}`;
+    const id = `playlistsong-${nanoid(16)}`;
     const query = {
       text: 'INSERT INTO playlistsongs VALUES($1, $2, $3) RETURNING id',
       values: [id, playlistId, songId],
@@ -56,7 +56,9 @@ class PlaylistsService {
 
   async getSongsFromPlaylist(playlistId) {
     const query = {
-      text: 'SELECT songs.id, songs.title, songs.performer FROM playlistsongs INNER JOIN songs ON songs.id = playlistsongs.song_id WHERE playlistsongs.playlist_id = $1',
+      text: `SELECT songs.id, songs.title, songs.performer FROM playlistsongs 
+      INNER JOIN songs ON songs.id = playlistsongs.song_id 
+      WHERE playlistsongs.playlist_id = $1`,
       values: [playlistId],
     };
     const result = await this._pool.query(query);
@@ -89,7 +91,7 @@ class PlaylistsService {
     }
   }
 
-  async verifyNoteAccess(playlistId, userId) {
+  async verifyPlaylistAccess(playlistId, userId) {
     try {
       await this.verifyPlaylistOwner(playlistId, userId);
     } catch (error) {

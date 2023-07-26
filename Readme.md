@@ -20,8 +20,18 @@ UPDATE V2 For Submisi Dicoding 2 Fundamental Back-End :
 - Activities
 - Revisi Code Sesuai Masukan dan Menyelesaikan Optional Task di v1 dan v2
 
+UPDATE V3 For Submisi Dicoding 2 Fundamental Back-End :
+
+- Users
+- Authentications
+- PLaylists
+- JOIN Table
+- Collaboration
+- Activities
+- Revisi Code Sesuai Masukan dan Menyelesaikan Optional Task di v1 dan v2
+
 Command to Reset DB :
-TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities
+TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities, user_album_likes
 
 Command Backup:
 TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities

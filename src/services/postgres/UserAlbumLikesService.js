@@ -16,10 +16,10 @@ class UserAlbumLikesService {
       values: [id, userId, albumId],
     };
     const result = await this._pool.query(query);
-    await this._cacheService.delete(`like:${userId}`);
     if (!result.rowCount) {
       throw new InvariantError('Failed to like album');
     }
+    await this._cacheService.delete(`like:${userId}`);
   }
 
   async deleteLike(userId, albumId) {
@@ -28,20 +28,20 @@ class UserAlbumLikesService {
       values: [userId, albumId],
     };
     const result = await this._pool.query(query);
-    await this._cacheService.delete(`likes:${userId}`);
     if (!result.rowCount) {
       throw new NotFoundError('Gagal menghapus like album. Id tidak ditemukan');
     }
+    await this._cacheService.delete(`likes:${userId}`);
   }
 
   async getTotalLike(albumId) {
     try {
       const result = await this._cacheService.get(`like:${albumId}`);
       return {
-        likes: JSON.parse(result),
+        likes: result.rowCount,
         from: 'cache',
       };
-    } catch {
+    } catch (error) {
       const query = {
         text: 'SELECT * FROM user_album_likes WHERE album_id = $1',
         values: [albumId],

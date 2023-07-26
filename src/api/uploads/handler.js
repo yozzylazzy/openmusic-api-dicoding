@@ -22,9 +22,6 @@ class UploadsHandler {
       const response = h.response({
         status: 'success',
         message: 'Sampul berhasil diunggah',
-        cover: {
-          pictureUrl: coverUrl,
-        },
       });
       response.code(201);
       return response;

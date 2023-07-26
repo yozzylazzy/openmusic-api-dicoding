@@ -1,25 +1,37 @@
+const autoBind = require('auto-bind');
+
 class UploadsHandler {
   constructor(albumsService, storageService, validator) {
     this._albumsService = albumsService;
     this._storageService = storageService;
     this._validator = validator;
+
+    autoBind(this);
   }
 
-  async poastAlbumCoverHandler(request, h) {
-    const { albumId } = request.params;
-    const { data } = request.payload;
-    this._validator.validateImageHeaders(data.hapi.headers);
-    const filename = await this._storageService.writeFile(data, data.hapi);
-    const coverUrl = `http://${process.env.HOST}:${process.env.PORT}/albums/${albumId}/cover/${filename}`;
+  async postAlbumCoverHandler(request, h) {
+    try {
+      const { albumId } = request.params;
+      const { cover } = request.payload;
+      this._validator.validateImageHeaders(cover.hapi.headers);
+      const filename = await this._storageService.writeFile(cover, cover.hapi);
+      const coverUrl = `http://${process.env.HOST}:${process.env.PORT}/albums/${albumId}/cover/${filename}`;
 
-    await this._albumsService.updateAlbumCover(albumId, coverUrl);
+      await this._albumsService.updateAlbumCover(albumId, coverUrl);
 
-    const response = h.response({
-      status: 'success',
-      message: 'Sampul berhasil diunggah',
-    });
-    response.code(201);
-    return response;
+      const response = h.response({
+        status: 'success',
+        message: 'Sampul berhasil diunggah',
+        cover: {
+          pictureUrl: coverUrl,
+        },
+      });
+      response.code(201);
+      return response;
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
   }
 }
 

@@ -4,7 +4,7 @@ const routes = (handler) => [
   {
     method: 'POST',
     path: '/albums/{id}/covers',
-    handler: handler.poastAlbumCoverHandler,
+    handler: handler.postAlbumCoverHandler,
     options: {
       payload: {
         allow: 'multipart/form-data',

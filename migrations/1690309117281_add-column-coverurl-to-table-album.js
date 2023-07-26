@@ -1,11 +1,11 @@
 exports.up = (pgm) => {
   pgm.addColumn('albums', {
-    coverUrl: {
+    coverurl: {
       type: 'TEXT',
     },
   });
 };
 
 exports.down = (pgm) => {
-  pgm.dropColumn('albums', 'coverUrl');
+  pgm.dropColumn('albums', 'coverurl');
 };

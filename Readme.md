@@ -33,6 +33,8 @@ UPDATE V3 For Submisi Dicoding 3 Fundamental Back-End :
 
 NOTES: Upload Testing di Postman harus dijalankan secara manual karena belum support
 
+All test case and JSON Export has been tested using mailtrap and manual testing
+
 Command to Reset DB :
 TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities, user_album_likes
 

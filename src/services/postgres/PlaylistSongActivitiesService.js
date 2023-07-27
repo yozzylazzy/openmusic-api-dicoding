@@ -15,7 +15,7 @@ class PlaylistSongActivitiesService {
       values: [id, playlistId, songId, userId, action, time],
     };
     const result = await this._pool.query(query);
-    if (!result.rows.length) {
+    if (!result.rowCount) {
       throw new InvariantError('Aktivitas Playlist Song gagal ditambahkan');
     }
     return result.rows[0].id;

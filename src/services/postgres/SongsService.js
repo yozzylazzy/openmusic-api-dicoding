@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
 const { mapDBSongsToModel } = require('../../utils');
@@ -19,7 +18,7 @@ class SongsService {
       values: [id, title, year, performer, genre, duration, albumId],
     };
     const result = await this._pool.query(query);
-    if (!result.rows.length) {
+    if (!result.rowCount) {
       throw new InvariantError('Lagu gagal ditambahkan');
     }
     return result.rows[0].id;
@@ -30,8 +29,8 @@ class SongsService {
       text: 'SELECT id, title, performer FROM songs WHERE LOWER(title) LIKE $1 AND LOWER(performer) LIKE $2',
       values: [`%${title.toLowerCase()}%`, `%${performer.toLowerCase()}%`],
     };
-    const result = await this._pool.query(query);
-    return result.rows;
+    const { rows } = await this._pool.query(query);
+    return rows;
   }
 
   async getSongById(id) {
@@ -40,7 +39,7 @@ class SongsService {
       values: [id],
     };
     const result = await this._pool.query(query);
-    if (!result.rows.length) {
+    if (!result.rowCount) {
       throw new NotFoundError('Lagu tidak ditemukan');
     }
     return result.rows.map(mapDBSongsToModel)[0];
@@ -52,7 +51,7 @@ class SongsService {
       values: [albumId],
     };
     const result = await this._pool.query(query);
-    return result.rows.map(mapDBSongsToModel);
+    return result.rows;
   }
 
   async editSongById(id, {
@@ -78,7 +77,7 @@ class SongsService {
       values: [id],
     };
     const result = await this._pool.query(query);
-    if (!result.rows.length) {
+    if (!result.rowCount) {
       throw new NotFoundError('Lagu gagal dihapus. Id tidak ditemukan');
     }
   }

@@ -3,7 +3,7 @@ const routes = require('./routes');
 
 module.exports = {
   name: 'userAlbumLikes',
-  version: '1.0.0',
+  version: '3.0.0',
   register: async (server, { userAlbumLikesService, albumsService }) => {
     const userAlbumLikesHandler = new UserAlbumLikesHandler(userAlbumLikesService, albumsService);
     server.route(routes(userAlbumLikesHandler));

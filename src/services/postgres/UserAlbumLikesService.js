@@ -19,7 +19,7 @@ class UserAlbumLikesService {
     if (!result.rowCount) {
       throw new InvariantError('Failed to like album');
     }
-    await this._cacheService.delete(`like:${userId}`);
+    await this._cacheService.delete(`like:${albumId}`);
   }
 
   async deleteLike(userId, albumId) {
@@ -31,15 +31,15 @@ class UserAlbumLikesService {
     if (!result.rowCount) {
       throw new NotFoundError('Gagal menghapus like album. Id tidak ditemukan');
     }
-    await this._cacheService.delete(`likes:${userId}`);
+    await this._cacheService.delete(`like:${albumId}`);
   }
 
   async getTotalLike(albumId) {
     try {
       const result = await this._cacheService.get(`like:${albumId}`);
       return {
-        likes: result.rowCount,
-        from: 'cache',
+        likes: JSON.parse(result.rowsCount),
+        cached: true,
       };
     } catch (error) {
       const query = {

@@ -1,0 +1,6649 @@
+{
+	"id": "2e8d8104-6245-4988-adee-b6cc38d437a6",
+	"name": "Open Music API V3 Test",
+	"timestamp": "2023-07-27T14:23:00.961Z",
+	"collection_id": "25586999-ee2c5b8b-a5ca-4570-bac2-4a4d5e43d464",
+	"folder_id": 0,
+	"environment_id": "25586999-5383b4b1-0625-4f0c-8471-ac6b027f2495",
+	"totalPass": 531,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-07-27T14:22:39.468Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "541d80b8-c781-41ee-810c-487fa5ba7f26",
+			"name": "Add Album with Invalid Payload",
+			"url": "http://localhost:5000/albums",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				12,
+				3,
+				3,
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "00249948-e8d0-424a-868f-30fe5bb1afd5",
+			"name": "Add Album with Valid Payload",
+			"url": "http://localhost:5000/albums",
+			"time": 33,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "daa7e1a6-f80b-464f-a47c-3086c8ac328d",
+			"name": "Get Detail Album with Invalid Id",
+			"url": "http://localhost:5000/albums/xxx",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "fd3c37dc-0869-4285-8655-782ce17e3335",
+			"name": "Get Detail Album with Valid Id",
+			"url": "http://localhost:5000/albums/ucPSfycnUFOxPy1l",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "35dac944-e4e5-497f-8010-bf4096d565f7",
+			"name": "Edit Album with Invalid Payload",
+			"url": "http://localhost:5000/albums/ucPSfycnUFOxPy1l",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				3,
+				3,
+				3,
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "26857d4a-5502-4866-b4fd-f7dd66a1ee6c",
+			"name": "Edit Album with Invalid Id",
+			"url": "http://localhost:5000/albums/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "309ce0fa-814e-486a-926f-937c74e16fb5",
+			"name": "Edit Album with Valid Id",
+			"url": "http://localhost:5000/albums/ucPSfycnUFOxPy1l",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"when GET detail albums": true,
+				"it should response with revised content": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"when GET detail albums": {
+					"pass": 1,
+					"fail": 0
+				},
+				"it should response with revised content": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"when GET detail albums": true,
+					"it should response with revised content": true
+				}
+			]
+		},
+		{
+			"id": "ea52d43e-570e-42b0-9bb7-08bda7a7dca0",
+			"name": "Delete Album with Invalid Id",
+			"url": "http://localhost:5000/albums/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3ab3b9f6-d577-49b8-96cc-9e9726dbcaba",
+			"name": "Delete Album with Valid Id",
+			"url": "http://localhost:5000/albums/ucPSfycnUFOxPy1l",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"when GET detail albums": true,
+				"it should response with not found": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"when GET detail albums": {
+					"pass": 1,
+					"fail": 0
+				},
+				"it should response with not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"when GET detail albums": true,
+					"it should response with not found": true
+				}
+			]
+		},
+		{
+			"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+			"name": "Add Song with Invalid Payload",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 8,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 8,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 8,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 8,
+					"fail": 0
+				}
+			},
+			"times": [
+				2,
+				3,
+				2,
+				2,
+				3,
+				2,
+				3,
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "017f696a-ea69-4a95-b2b5-1aba24ccebb6",
+			"name": "Add Song with Valid Payload",
+			"url": "http://localhost:5000/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "eb14c4c3-4036-4816-8ba8-580ae46d7310",
+			"name": "[No Test] Add Song with Valid Payload",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bcd180db-0442-45a9-85de-b5e8a35781f2",
+			"name": "Get All Songs",
+			"url": "http://localhost:5000/songs",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "16cc6646-7359-4282-b1c4-fb18c841e685",
+			"name": "Get Detail Songs with Invalid Id",
+			"url": "http://localhost:5000/songs/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "ea935bc7-d8e8-461b-976e-4e9efb6a29e4",
+			"name": "Get Detail Songs with Valid Id",
+			"url": "http://localhost:5000/songs/song-IW5DcAINRVMPyd2t",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+			"name": "Edit Song with Invalid Payload",
+			"url": "http://localhost:5000/songs/song-IW5DcAINRVMPyd2t",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 8,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 8,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 8,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 8,
+					"fail": 0
+				}
+			},
+			"times": [
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "7ad2d390-3a55-4644-9921-7d8cfabb8074",
+			"name": "Edit Song with Invalid Id",
+			"url": "http://localhost:5000/songs/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "867f4c3b-59f6-4d5c-87d1-a20c60baca86",
+			"name": "Edit Song with Valid Id",
+			"url": "http://localhost:5000/songs/song-IW5DcAINRVMPyd2t",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"when GET detail song": true,
+				"it should response with revised content": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"when GET detail song": {
+					"pass": 1,
+					"fail": 0
+				},
+				"it should response with revised content": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"when GET detail song": true,
+					"it should response with revised content": true
+				}
+			]
+		},
+		{
+			"id": "1dff6f66-efa4-4b7e-a55e-3bf6441efa40",
+			"name": "Delete Song with Invalid Id",
+			"url": "http://localhost:5000/songs/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "7d6fcf73-b8d9-4a38-b931-e44dbedc0325",
+			"name": "Delete Song with Valid Id",
+			"url": "http://localhost:5000/songs/song-IW5DcAINRVMPyd2t",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"when GET detail song": true,
+				"it should response with not found": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"when GET detail song": {
+					"pass": 1,
+					"fail": 0
+				},
+				"it should response with not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"when GET detail song": true,
+					"it should response with not found": true
+				}
+			]
+		},
+		{
+			"id": "bb7324b9-4a98-498d-908e-3574274c85df",
+			"name": "Add Album",
+			"url": "http://localhost:5000/albums",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e4b512b9-97f2-43f2-a134-45f57a248a7b",
+			"name": "Add Album With No Songs",
+			"url": "http://localhost:5000/albums",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "60e49a31-d099-4674-b7e0-72d34dce3720",
+			"name": "Add Song A with Album Id",
+			"url": "http://localhost:5000/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "0bf2a2b0-568c-4abd-a815-752483a6af05",
+			"name": "Add Song B with Album Id",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "ef24765c-0575-450b-aca2-0e52ede86f66",
+			"name": "Get Detail Album which Contains Songs",
+			"url": "http://localhost:5000/albums/vp9sNjkilZJIDMaa",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "1ec2eddf-e104-4d26-a525-f3637d856bd8",
+			"name": "Get Detail Album which Not Contains Songs",
+			"url": "http://localhost:5000/albums/VXdq6PpH4LGa5_Cw",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "aba67ff7-d6be-4c52-9a3c-cefb0e12519c",
+			"name": "Add Song A",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0c556d51-9912-4d97-b4ef-62209c7941a1",
+			"name": "Add Song B",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "305baee2-9563-49e4-a50b-52e476e40322",
+			"name": "Add Song C",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0aaad84c-b844-489c-b09a-49641561ff90",
+			"name": "Add Song D",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "557b79bf-bcc3-464f-922e-8b951abf00d1",
+			"name": "Seach Song using Title",
+			"url": "http://localhost:5000/songs?title=cint",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "fd7efe0e-f0cf-4a20-840f-212708e9f491",
+			"name": "Seach Song using Performer",
+			"url": "http://localhost:5000/songs?performer=chris",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "81111009-9a86-4ab3-9b9b-1f26d7e9d129",
+			"name": "Seach Song using Title and Performer",
+			"url": "http://localhost:5000/songs?title=kupu&performer=peter",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3af84061-bc72-440c-8b29-1a2a87e447fa",
+			"name": "Delete Song A",
+			"url": "http://localhost:5000/songs/song--2b8bmrX7BoGmTCd",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e4c8370a-1039-40fd-bdf3-2d6b1684acf5",
+			"name": "Delete Song B",
+			"url": "http://localhost:5000/songs/song-xGmjzi2mrjGp17TL",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "486c0df8-df9c-442c-a9b6-754f8477cb15",
+			"name": "Delete Song C",
+			"url": "http://localhost:5000/songs/song-y4lIqEt7MXEJ1LpE",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2e2ab823-4c4e-4b30-9d98-b3f8f502a350",
+			"name": "Delete Song D",
+			"url": "http://localhost:5000/songs/song-Qzc4wqqNo6_mxCkS",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+			"name": "Add User with Invalid Payload",
+			"url": "http://localhost:5000/users",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 6,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 6,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 6,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 6,
+					"fail": 0
+				}
+			},
+			"times": [
+				2,
+				2,
+				2,
+				3,
+				2,
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "49971307-2504-41d6-8915-e5af56924d07",
+			"name": "Add User with Valid Payload",
+			"url": "http://localhost:5000/users",
+			"time": 79,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "965d7db2-413c-4409-9d43-6228310a57a3",
+			"name": "Add User with Already Taken Username",
+			"url": "http://localhost:5000/users",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "cdf3b146-cbd9-4cd2-b77d-131f0a6d0dda",
+			"name": "Add User John",
+			"url": "http://localhost:5000/users",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f39fcabe-38c3-448a-aee3-548c5bcf621c",
+			"name": "Add User Jane",
+			"url": "http://localhost:5000/users",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "09fe3d33-9f0b-45d3-b152-883f51c9ad01",
+			"name": "Login with Invalid Payload",
+			"url": "http://localhost:5000/authentications",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 4,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				2,
+				3,
+				3,
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "b51995b2-bd20-46e4-9ac5-b335b35db236",
+			"name": "Login with Not Found User",
+			"url": "http://localhost:5000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "99b32b51-2f04-478e-a388-cb7d0c08536b",
+			"name": "Login with Invalid Password",
+			"url": "http://localhost:5000/authentications",
+			"time": 55,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "36591ea4-dfad-4fbe-aaf8-2af0008147e9",
+			"name": "Login with User John",
+			"url": "http://localhost:5000/authentications",
+			"time": 82,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d3d4fdeb-7d6f-4c41-bebf-88a1c553e5d4",
+			"name": "Login with User Jane",
+			"url": "http://localhost:5000/authentications",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "f3c47c22-e2cf-4bf5-bddb-dffebffafb06",
+			"name": "Refresh Authentication with Invalid Payload",
+			"url": "http://localhost:5000/authentications",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "160e7668-8c34-4dd7-94ee-c9f81fd1e89c",
+			"name": "Refresh Authentication with Invalid Token",
+			"url": "http://localhost:5000/authentications",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "8b794c46-862d-4e72-b13e-37713d6e4a04",
+			"name": "Refresh Authentication with John Access Token",
+			"url": "http://localhost:5000/authentications",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "0521f65e-2b56-4ddd-a9a1-3b74b6744479",
+			"name": "Refresh Authentication John Authentication",
+			"url": "http://localhost:5000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "cdeff76d-f3a6-4af3-9428-befc2157b406",
+			"name": "Delete Authentication with Invalid Payload",
+			"url": "http://localhost:5000/authentications",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "a8913b49-9164-44b7-ac21-de87b87b2fcd",
+			"name": "Delete Authentication with Invalid Token",
+			"url": "http://localhost:5000/authentications",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "904b84cb-2a7a-4e83-b450-af5233d7e059",
+			"name": "Delete Authentication John Authentication",
+			"url": "http://localhost:5000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "5b1d829c-1b8f-4479-a12f-efe1a6f71ad8",
+			"name": "Delete Authentication Jane Authentication",
+			"url": "http://localhost:5000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d0226495-dd18-4dfa-8073-ae09c58e5c7f",
+			"name": "Refresh Authentication with Deleted Authentication",
+			"url": "http://localhost:5000/authentications",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "77aea63a-83ca-480d-a7cc-e0a4b262a0a5",
+			"name": "Add Song A",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7765720b-259b-4d9a-8e03-d0e57456d9c0",
+			"name": "Add Song B",
+			"url": "http://localhost:5000/songs",
+			"time": 2,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5c01bb6e-5ad0-4a2a-9a1f-dae083f76c78",
+			"name": "Add User John",
+			"url": "http://localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "82b3dd99-2e7d-4a33-9920-d0d1512cd2ea",
+			"name": "Add User Jane",
+			"url": "http://localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "627bb1f8-6ba2-48b9-94c9-117c32de0c50",
+			"name": "Login with User John",
+			"url": "http://localhost:5000/authentications",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				54
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cb957fe8-a16f-4a10-a778-8438e8400982",
+			"name": "Login with User Jane",
+			"url": "http://localhost:5000/authentications",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				54
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fa9934d1-b113-4f5b-a151-e14515a0e222",
+			"name": "Add Playlist without Authentication",
+			"url": "http://localhost:5000/playlists",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true
+				}
+			]
+		},
+		{
+			"id": "21ea9480-f1c7-44fe-bd7b-e1558ff53071",
+			"name": "Add Playlist with Invalid Payload",
+			"url": "http://localhost:5000/playlists",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "fad7d882-9db5-4fac-a642-d1f375c19d41",
+			"name": "(John) Add Playlist with Valid Payload",
+			"url": "http://localhost:5000/playlists",
+			"time": 26,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "5af6a77f-1a32-48b4-a8b9-e2ffaf6ca93a",
+			"name": "(John) Add Another Playlist with Valid Payload",
+			"url": "http://localhost:5000/playlists",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "141d8189-51cb-4976-8358-5a285b63a347",
+			"name": "(John) Get All Playlists",
+			"url": "http://localhost:5000/playlists",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "5bdabbed-323e-4c55-811a-d175144db20b",
+			"name": "(John) Add Song to Playlist with Bad Payload",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "74ad30bf-1ab3-4ace-8044-1d30f225de02",
+			"name": "(John) Add Song to Playlist with Not Found Song",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3319129c-a474-42d6-bf11-f462a706b0cf",
+			"name": "(John) Add Song A to Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 35,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "7059749b-0c4f-4884-9637-879523f03de5",
+			"name": "(John) Add Song B to Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "5aa29cac-d60f-4fc7-98f6-26fc5005b631",
+			"name": "(Jane) Add Song to John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 28,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "1d260567-87e1-4549-9b50-67b691e9ffc2",
+			"name": "(John) Get Songs in Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "4b6df7c9-cba0-4e02-97e3-56d7ac5fce7f",
+			"name": "(Jane) Get Songs in John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "1fd1b77c-1fc4-4e98-9c01-1740f8a31ce3",
+			"name": "(John) Delete Song from Playlist with Invalid Payload",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "51d47055-d079-456c-b653-8d4f041188be",
+			"name": "(John) Delete Song A from Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "b88f65a6-1400-4b80-9559-31dd7f8c42b3",
+			"name": "(Jane) Delete Song B from John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "1b298c19-d540-4c39-981f-9e7131804a7a",
+			"name": "(John) Get Songs in Playlist After Deletion Song",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "9fb28a5e-ba23-4a84-b86d-40a6439870a9",
+			"name": "(Jane) Delete John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3213b89b-3332-4bb4-8e9a-822171bddfd7",
+			"name": "(John) Delete First Playlist",
+			"url": "http://localhost:5000/playlists/playlist-nG8tW17HIp1GWYwe",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "23d12d2b-1089-4d66-8845-869f86b2c3de",
+			"name": "(John) Delete Playlist",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d87a9d42-ff41-4009-ac3c-bf0338611cd4",
+			"name": "(John) Get Songs in Playlist After Deletion",
+			"url": "http://localhost:5000/playlists/playlist-fkdu-VuIzINyrtxh/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3d5dd05f-1ed6-4cba-a24f-0804e967c90b",
+			"name": "Add Song A",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "af58cfb6-abed-4895-800d-00dde3dbca7c",
+			"name": "Add Song B",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3274cbca-042b-4901-8d7b-e7e0817ac227",
+			"name": "Add User John",
+			"url": "http://localhost:5000/users",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7c81c183-39c7-4f35-9433-81392f1994cf",
+			"name": "Add User Jane",
+			"url": "http://localhost:5000/users",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ec31e3cb-ea82-4f06-bf6c-38eda417bcc1",
+			"name": "Login with User John",
+			"url": "http://localhost:5000/authentications",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				54
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b0078706-637d-4849-a9a0-0a99d7e0ee86",
+			"name": "Login with User Jane",
+			"url": "http://localhost:5000/authentications",
+			"time": 53,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				53
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d3618cb3-c148-48e1-b652-524dbe41f9bc",
+			"name": "(John) Create Playlist",
+			"url": "http://localhost:5000/playlists",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9b50f64d-f787-4b1e-9010-24c3d9a8ec81",
+			"name": "(John) Add Song A to Playlist",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/songs",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "da38d26c-d0dd-4469-bdce-652e249561e9",
+			"name": "(John) Add Song B to Playlist",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/songs",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4a28588d-e3c9-45c1-a5f4-a16216d63218",
+			"name": "(John) Delete Song A from Playlist",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4b2ec723-8fde-42e7-9e7a-63f609bf19fc",
+			"name": "Get Activities in Playlist without Authentication",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/activities",
+			"time": 2,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true
+				}
+			]
+		},
+		{
+			"id": "99dee883-3428-4ddd-981f-eb3f6c431f96",
+			"name": "(Jane) Get Activities in Not Found Playlist",
+			"url": "http://localhost:5000/playlists/xxx/activities",
+			"time": 2,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3d156c03-db44-493f-9305-f9762f02e008",
+			"name": "(Jane) Get Activities in John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/activities",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "fc4be5bf-ce06-4a63-a222-e6ee795a7918",
+			"name": "(John) Get Activities in Playlist",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/activities",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"it should response with valid body": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"it should response with valid body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"it should response with valid body": true
+				}
+			]
+		},
+		{
+			"id": "12f362e9-199c-451a-8038-2a39b2a20fcc",
+			"name": "(John) Delete Playlist",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "2f1b6dbd-f1e2-4907-a2ee-68239c534ea8",
+			"name": "(John) Get Activities in Playlist After Deletion",
+			"url": "http://localhost:5000/playlists/playlist-hJAaF9h1IdgxekVP/activities",
+			"time": 2,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "7de18680-8a31-44bd-8dce-76e72894426f",
+			"name": "Add Song A",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6148e96f-0d84-4220-a5b2-fc320ed0b17f",
+			"name": "Add Song B",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a454cbb6-848f-4785-87d8-08fdcd114256",
+			"name": "Add User John",
+			"url": "http://localhost:5000/users",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bf13b8a0-2fc5-4372-bd2e-8cf6b02d85f8",
+			"name": "Add User Tom",
+			"url": "http://localhost:5000/users",
+			"time": 56,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				56
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "05750e9d-fa20-4f2b-964a-2b61dc01c2b7",
+			"name": "Login with User John",
+			"url": "http://localhost:5000/authentications",
+			"time": 53,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				53
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f0e8ce5e-c4a5-4a8d-a741-0f85701f8e79",
+			"name": "Login with User Tom",
+			"url": "http://localhost:5000/authentications",
+			"time": 53,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				53
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dccce00e-003e-4a7f-903c-14f936e882a7",
+			"name": "(John) Create Playlist",
+			"url": "http://localhost:5000/playlists",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f81025a4-db76-477c-8b26-68713f1b3783",
+			"name": "Make Collaborator without Authentication",
+			"url": "http://localhost:5000/collaborations",
+			"time": 2,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true
+				}
+			]
+		},
+		{
+			"id": "252fbe3a-875c-43d0-b000-5ea5969e69fa",
+			"name": "(John) Make Collaboration in Playlist with Not Found User",
+			"url": "http://localhost:5000/collaborations",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "9d0b9445-6d09-4906-b004-f69879b6b90c",
+			"name": "(John) Make Collaboration in Not Found Playlist",
+			"url": "http://localhost:5000/collaborations",
+			"time": 2,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "e86beadf-79c9-4852-96c5-5acbd5935f29",
+			"name": "(Tom) Make Collaboration in John Playlist by His Own",
+			"url": "http://localhost:5000/collaborations",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "8c2699f8-4c64-4991-b9a5-1ac5c58efb97",
+			"name": "(John) Make Collaboration in Playlist with Tom",
+			"url": "http://localhost:5000/collaborations",
+			"time": 7,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "64aa8c3e-f2e3-465d-afbb-0fb4bc381179",
+			"name": "(Tom) Get All Playlists",
+			"url": "http://localhost:5000/playlists",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "6eda494e-3209-45e3-943f-4d0a3d6ce8ee",
+			"name": "(Tom) Add Song A to John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "cd0d7e65-eac2-40e3-8149-b038bdce2ec9",
+			"name": "(Tom) Add Song B to John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "7baf5d1c-79bf-490c-9f2e-09585bfb559d",
+			"name": "(Tom) Get John Playlist Songs",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "6fed845a-7c03-4b49-8d5d-74062e665eb1",
+			"name": "(Tom) Delete Song A from John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3747e50d-1863-4cd3-bff1-27ee56b13dd6",
+			"name": "(Tom) Delete John Playlist",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "1302687a-e60a-4382-a5c8-1e1fa7d7bc5c",
+			"name": "(Tom) Delete Collaboration in Playlist",
+			"url": "http://localhost:5000/collaborations",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "37cf0b9c-8aa0-471b-a6d4-c1fdd32ee76d",
+			"name": "(John) Delete Collaboration in Playlist with Tom",
+			"url": "http://localhost:5000/collaborations",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "e1386499-fa84-45d9-ba92-afcde9bb25a8",
+			"name": "(Tom) Get All Playlists after Collaboration Deletion",
+			"url": "http://localhost:5000/playlists",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "86d23960-46a8-4139-85ce-6f2405ea99ea",
+			"name": "(Tom) Add Song to John Playlist after Collaboration Deletion",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "a4c64bf8-335a-48cd-b1a2-3144e3499909",
+			"name": "(John) Delete Playlist",
+			"url": "http://localhost:5000/playlists/playlist-IM6F9A0XlbRbj1CQ",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "03785ca6-4aff-41fa-8b27-83f446ea130a",
+			"name": "Add Song A",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3847619a-0718-4fb6-a113-4eecb72b1ccb",
+			"name": "Add Song B",
+			"url": "http://localhost:5000/songs",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fa9ea6e5-673a-4797-bdd7-329d7c87ec81",
+			"name": "Add User John",
+			"url": "http://localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0569dd09-036a-4860-8369-083ce806927b",
+			"name": "Add User Jane",
+			"url": "http://localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "93eaf104-c705-4845-b584-350b99a92a26",
+			"name": "Login with User John",
+			"url": "http://localhost:5000/authentications",
+			"time": 55,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				55
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a6391d56-5ed5-4056-b4fb-84412cc0bedd",
+			"name": "Login with User Jane",
+			"url": "http://localhost:5000/authentications",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				54
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "54b8934a-23bf-44ab-ad52-ef7afe8b2462",
+			"name": "(John) Create Playlist",
+			"url": "http://localhost:5000/playlists",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f6e64da3-147c-44d5-9715-e0e706a15d9c",
+			"name": "(John) Add Song A to Playlist",
+			"url": "http://localhost:5000/playlists/playlist-nHFAyDR4i9iPPSUw/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4627f1e5-4093-4906-9a15-ddc6c85d3ed9",
+			"name": "(John) Add Song B to Playlist",
+			"url": "http://localhost:5000/playlists/playlist-nHFAyDR4i9iPPSUw/songs",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fa679bc6-e53c-4395-bcd5-f5f7db5d522e",
+			"name": "(John) Delete Song A from Playlist",
+			"url": "http://localhost:5000/playlists/playlist-nHFAyDR4i9iPPSUw/songs",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "57b8c997-6b1c-4bce-ac1a-413177bea191",
+			"name": "Export Playlist without Authentication",
+			"url": "http://localhost:5000/export/playlists/playlist-nHFAyDR4i9iPPSUw",
+			"time": 2,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true
+				}
+			]
+		},
+		{
+			"id": "912aff2a-c6c1-49ce-afea-944c077b1bf4",
+			"name": "(John) Export Playlist with Bad Payload",
+			"url": "http://localhost:5000/export/playlists/playlist-nHFAyDR4i9iPPSUw",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "4f5219a7-28a3-443c-8fb3-2375a64dc038",
+			"name": "(John) Export Playlist with Not Found Playlist",
+			"url": "http://localhost:5000/export/playlists/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "96d414d1-6537-46de-829c-a7269d5e2120",
+			"name": "(Jane) Export John Playlist",
+			"url": "http://localhost:5000/export/playlists/playlist-nHFAyDR4i9iPPSUw",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"it should response 403 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 403 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 403 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "966eb355-78cf-4a58-81f6-0a1d7b82f6af",
+			"name": "(John) Export Playlist",
+			"url": "http://localhost:5000/export/playlists/playlist-nHFAyDR4i9iPPSUw",
+			"time": 13,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "f9f7c7a2-59bd-4c32-8d0f-80baf0693788",
+			"name": "(John) Delete Playlist",
+			"url": "http://localhost:5000/playlists/playlist-nHFAyDR4i9iPPSUw",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "47a7e63b-c3a3-4860-951f-5544f9201629",
+			"name": "Add Album",
+			"url": "http://localhost:5000/albums",
+			"time": 26,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				26
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "502aecb6-df03-4d74-9f3b-511a2118c09e",
+			"name": "Get Detail Albums without Cover URL",
+			"url": "http://localhost:5000/albums/CxS_xgjzKyPpZ01F",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d1218fae-6dcf-4ae1-b749-21750f2fd57c",
+			"name": "Add Cover Album with Non Image File",
+			"url": "http://localhost:5000/albums/CxS_xgjzKyPpZ01F/covers",
+			"time": 2,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"it should response 400 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "99bae273-9059-487d-96ad-a713e2de4e44",
+			"name": "Add Cover Album with Big Image File",
+			"url": "http://localhost:5000/albums/CxS_xgjzKyPpZ01F/covers",
+			"time": 2,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"it should response 413 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true
+			},
+			"testPassFailCounts": {
+				"it should response 413 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 413 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true
+				}
+			]
+		},
+		{
+			"id": "9d4cd391-b233-4a7e-a5f8-d9869e88f368",
+			"name": "Add Cover Album with Valid File",
+			"url": "http://localhost:5000/albums/CxS_xgjzKyPpZ01F/covers",
+			"time": 2,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"it should response 201 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "703fe695-4e28-44ba-b5bc-c1e5f45e9fca",
+			"name": "Get Detail Albums with Cover URL",
+			"url": "http://localhost:5000/albums/CxS_xgjzKyPpZ01F",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "1446e177-33f5-4ea0-b19d-cc3177991d19",
+			"name": "Add Album",
+			"url": "http://localhost:5000/albums",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "42d5bd3a-d40d-4caf-bdf7-31229a2d0779",
+			"name": "Add User John",
+			"url": "http://localhost:5000/users",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d9197a4f-0ab7-4cf4-8510-82cd588a0194",
+			"name": "Add User Jane",
+			"url": "http://localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fd57be94-189f-432c-b3dc-25c0569fc471",
+			"name": "Login with User John",
+			"url": "http://localhost:5000/authentications",
+			"time": 53,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				53
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a627639e-1949-4e87-90c4-67bf426e6d8f",
+			"name": "Login with User Jane",
+			"url": "http://localhost:5000/authentications",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				54
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f397e4f0-bd6e-40b7-bb1f-2177750936c1",
+			"name": "Like Album with No Authentication",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 2,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true
+				}
+			]
+		},
+		{
+			"id": "2e8d0df5-2bfc-4128-b72f-a6258afb6565",
+			"name": "(John) Like Not Found Album",
+			"url": "http://localhost:5000/albums/xxx/likes",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "df9c3733-78d6-40ec-a0a0-bd9afa14d3bc",
+			"name": "(John) Like Album",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 131,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				131
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "faa68aa3-20af-47c4-b397-623cd7e32297",
+			"name": "(John) Like Album Again",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d11ce0c4-1e23-4808-ac52-21380689e828",
+			"name": "(Jane) Like Album",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "ee3ba0be-49ef-4a36-9af0-87c3df3a26a2",
+			"name": "Get Album Like Count",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"respose should not have X-Data-Source header with value \"cache\"": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"respose should not have X-Data-Source header with value \"cache\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"respose should not have X-Data-Source header with value \"cache\"": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "2fee264c-0876-403b-8136-fb3d2501a8b8",
+			"name": "(Jane) Unlike Album",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "1d749085-c8b6-4406-82e0-5cb66b49ed88",
+			"name": "Get Album Like Count After Jane Unlike",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"respose should not have X-Data-Source header with value \"cache\"": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"respose should not have X-Data-Source header with value \"cache\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"respose should not have X-Data-Source header with value \"cache\"": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "52641713-0c71-4ba9-b29b-d841431999f8",
+			"name": "[Cache Test] Get Album Like Count (Again)",
+			"url": "http://localhost:5000/albums/GYeJq8QSiiizt6E4/likes",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"respose should have X-Data-Source header with value \"cache\"": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"respose should have X-Data-Source header with value \"cache\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"respose should have X-Data-Source header with value \"cache\"": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1694,
+	"collection": {
+		"requests": [
+			{
+				"id": "541d80b8-c781-41ee-810c-487fa5ba7f26",
+				"method": "POST"
+			},
+			{
+				"id": "541d80b8-c781-41ee-810c-487fa5ba7f26",
+				"method": "POST"
+			},
+			{
+				"id": "541d80b8-c781-41ee-810c-487fa5ba7f26",
+				"method": "POST"
+			},
+			{
+				"id": "541d80b8-c781-41ee-810c-487fa5ba7f26",
+				"method": "POST"
+			},
+			{
+				"id": "00249948-e8d0-424a-868f-30fe5bb1afd5",
+				"method": "POST"
+			},
+			{
+				"id": "daa7e1a6-f80b-464f-a47c-3086c8ac328d",
+				"method": "GET"
+			},
+			{
+				"id": "fd3c37dc-0869-4285-8655-782ce17e3335",
+				"method": "GET"
+			},
+			{
+				"id": "35dac944-e4e5-497f-8010-bf4096d565f7",
+				"method": "PUT"
+			},
+			{
+				"id": "35dac944-e4e5-497f-8010-bf4096d565f7",
+				"method": "PUT"
+			},
+			{
+				"id": "35dac944-e4e5-497f-8010-bf4096d565f7",
+				"method": "PUT"
+			},
+			{
+				"id": "35dac944-e4e5-497f-8010-bf4096d565f7",
+				"method": "PUT"
+			},
+			{
+				"id": "26857d4a-5502-4866-b4fd-f7dd66a1ee6c",
+				"method": "PUT"
+			},
+			{
+				"id": "309ce0fa-814e-486a-926f-937c74e16fb5",
+				"method": "PUT"
+			},
+			{
+				"id": "ea52d43e-570e-42b0-9bb7-08bda7a7dca0",
+				"method": "DELETE"
+			},
+			{
+				"id": "3ab3b9f6-d577-49b8-96cc-9e9726dbcaba",
+				"method": "DELETE"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "298cf304-1916-4954-bb86-4649b9df4da6",
+				"method": "POST"
+			},
+			{
+				"id": "017f696a-ea69-4a95-b2b5-1aba24ccebb6",
+				"method": "POST"
+			},
+			{
+				"id": "eb14c4c3-4036-4816-8ba8-580ae46d7310",
+				"method": "POST"
+			},
+			{
+				"id": "bcd180db-0442-45a9-85de-b5e8a35781f2",
+				"method": "GET"
+			},
+			{
+				"id": "16cc6646-7359-4282-b1c4-fb18c841e685",
+				"method": "GET"
+			},
+			{
+				"id": "ea935bc7-d8e8-461b-976e-4e9efb6a29e4",
+				"method": "GET"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "4a20e24c-9e3e-441c-905b-a7d57f194378",
+				"method": "PUT"
+			},
+			{
+				"id": "7ad2d390-3a55-4644-9921-7d8cfabb8074",
+				"method": "PUT"
+			},
+			{
+				"id": "867f4c3b-59f6-4d5c-87d1-a20c60baca86",
+				"method": "PUT"
+			},
+			{
+				"id": "1dff6f66-efa4-4b7e-a55e-3bf6441efa40",
+				"method": "DELETE"
+			},
+			{
+				"id": "7d6fcf73-b8d9-4a38-b931-e44dbedc0325",
+				"method": "DELETE"
+			},
+			{
+				"id": "bb7324b9-4a98-498d-908e-3574274c85df",
+				"method": "POST"
+			},
+			{
+				"id": "e4b512b9-97f2-43f2-a134-45f57a248a7b",
+				"method": "POST"
+			},
+			{
+				"id": "60e49a31-d099-4674-b7e0-72d34dce3720",
+				"method": "POST"
+			},
+			{
+				"id": "0bf2a2b0-568c-4abd-a815-752483a6af05",
+				"method": "POST"
+			},
+			{
+				"id": "ef24765c-0575-450b-aca2-0e52ede86f66",
+				"method": "GET"
+			},
+			{
+				"id": "1ec2eddf-e104-4d26-a525-f3637d856bd8",
+				"method": "GET"
+			},
+			{
+				"id": "aba67ff7-d6be-4c52-9a3c-cefb0e12519c",
+				"method": "POST"
+			},
+			{
+				"id": "0c556d51-9912-4d97-b4ef-62209c7941a1",
+				"method": "POST"
+			},
+			{
+				"id": "305baee2-9563-49e4-a50b-52e476e40322",
+				"method": "POST"
+			},
+			{
+				"id": "0aaad84c-b844-489c-b09a-49641561ff90",
+				"method": "POST"
+			},
+			{
+				"id": "557b79bf-bcc3-464f-922e-8b951abf00d1",
+				"method": "GET"
+			},
+			{
+				"id": "fd7efe0e-f0cf-4a20-840f-212708e9f491",
+				"method": "GET"
+			},
+			{
+				"id": "81111009-9a86-4ab3-9b9b-1f26d7e9d129",
+				"method": "GET"
+			},
+			{
+				"id": "3af84061-bc72-440c-8b29-1a2a87e447fa",
+				"method": "DELETE"
+			},
+			{
+				"id": "e4c8370a-1039-40fd-bdf3-2d6b1684acf5",
+				"method": "DELETE"
+			},
+			{
+				"id": "486c0df8-df9c-442c-a9b6-754f8477cb15",
+				"method": "DELETE"
+			},
+			{
+				"id": "2e2ab823-4c4e-4b30-9d98-b3f8f502a350",
+				"method": "DELETE"
+			},
+			{
+				"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+				"method": "POST"
+			},
+			{
+				"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+				"method": "POST"
+			},
+			{
+				"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+				"method": "POST"
+			},
+			{
+				"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+				"method": "POST"
+			},
+			{
+				"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+				"method": "POST"
+			},
+			{
+				"id": "a635241f-e528-40fd-89ef-d42e09f5e912",
+				"method": "POST"
+			},
+			{
+				"id": "49971307-2504-41d6-8915-e5af56924d07",
+				"method": "POST"
+			},
+			{
+				"id": "965d7db2-413c-4409-9d43-6228310a57a3",
+				"method": "POST"
+			},
+			{
+				"id": "cdf3b146-cbd9-4cd2-b77d-131f0a6d0dda",
+				"method": "POST"
+			},
+			{
+				"id": "f39fcabe-38c3-448a-aee3-548c5bcf621c",
+				"method": "POST"
+			},
+			{
+				"id": "09fe3d33-9f0b-45d3-b152-883f51c9ad01",
+				"method": "POST"
+			},
+			{
+				"id": "09fe3d33-9f0b-45d3-b152-883f51c9ad01",
+				"method": "POST"
+			},
+			{
+				"id": "09fe3d33-9f0b-45d3-b152-883f51c9ad01",
+				"method": "POST"
+			},
+			{
+				"id": "09fe3d33-9f0b-45d3-b152-883f51c9ad01",
+				"method": "POST"
+			},
+			{
+				"id": "b51995b2-bd20-46e4-9ac5-b335b35db236",
+				"method": "POST"
+			},
+			{
+				"id": "99b32b51-2f04-478e-a388-cb7d0c08536b",
+				"method": "POST"
+			},
+			{
+				"id": "36591ea4-dfad-4fbe-aaf8-2af0008147e9",
+				"method": "POST"
+			},
+			{
+				"id": "d3d4fdeb-7d6f-4c41-bebf-88a1c553e5d4",
+				"method": "POST"
+			},
+			{
+				"id": "f3c47c22-e2cf-4bf5-bddb-dffebffafb06",
+				"method": "PUT"
+			},
+			{
+				"id": "160e7668-8c34-4dd7-94ee-c9f81fd1e89c",
+				"method": "PUT"
+			},
+			{
+				"id": "8b794c46-862d-4e72-b13e-37713d6e4a04",
+				"method": "PUT"
+			},
+			{
+				"id": "0521f65e-2b56-4ddd-a9a1-3b74b6744479",
+				"method": "PUT"
+			},
+			{
+				"id": "cdeff76d-f3a6-4af3-9428-befc2157b406",
+				"method": "DELETE"
+			},
+			{
+				"id": "a8913b49-9164-44b7-ac21-de87b87b2fcd",
+				"method": "DELETE"
+			},
+			{
+				"id": "904b84cb-2a7a-4e83-b450-af5233d7e059",
+				"method": "DELETE"
+			},
+			{
+				"id": "5b1d829c-1b8f-4479-a12f-efe1a6f71ad8",
+				"method": "DELETE"
+			},
+			{
+				"id": "d0226495-dd18-4dfa-8073-ae09c58e5c7f",
+				"method": "PUT"
+			},
+			{
+				"id": "77aea63a-83ca-480d-a7cc-e0a4b262a0a5",
+				"method": "POST"
+			},
+			{
+				"id": "7765720b-259b-4d9a-8e03-d0e57456d9c0",
+				"method": "POST"
+			},
+			{
+				"id": "5c01bb6e-5ad0-4a2a-9a1f-dae083f76c78",
+				"method": "POST"
+			},
+			{
+				"id": "82b3dd99-2e7d-4a33-9920-d0d1512cd2ea",
+				"method": "POST"
+			},
+			{
+				"id": "627bb1f8-6ba2-48b9-94c9-117c32de0c50",
+				"method": "POST"
+			},
+			{
+				"id": "cb957fe8-a16f-4a10-a778-8438e8400982",
+				"method": "POST"
+			},
+			{
+				"id": "fa9934d1-b113-4f5b-a151-e14515a0e222",
+				"method": "POST"
+			},
+			{
+				"id": "21ea9480-f1c7-44fe-bd7b-e1558ff53071",
+				"method": "POST"
+			},
+			{
+				"id": "fad7d882-9db5-4fac-a642-d1f375c19d41",
+				"method": "POST"
+			},
+			{
+				"id": "5af6a77f-1a32-48b4-a8b9-e2ffaf6ca93a",
+				"method": "POST"
+			},
+			{
+				"id": "141d8189-51cb-4976-8358-5a285b63a347",
+				"method": "GET"
+			},
+			{
+				"id": "5bdabbed-323e-4c55-811a-d175144db20b",
+				"method": "POST"
+			},
+			{
+				"id": "74ad30bf-1ab3-4ace-8044-1d30f225de02",
+				"method": "POST"
+			},
+			{
+				"id": "3319129c-a474-42d6-bf11-f462a706b0cf",
+				"method": "POST"
+			},
+			{
+				"id": "7059749b-0c4f-4884-9637-879523f03de5",
+				"method": "POST"
+			},
+			{
+				"id": "5aa29cac-d60f-4fc7-98f6-26fc5005b631",
+				"method": "POST"
+			},
+			{
+				"id": "1d260567-87e1-4549-9b50-67b691e9ffc2",
+				"method": "GET"
+			},
+			{
+				"id": "4b6df7c9-cba0-4e02-97e3-56d7ac5fce7f",
+				"method": "GET"
+			},
+			{
+				"id": "1fd1b77c-1fc4-4e98-9c01-1740f8a31ce3",
+				"method": "DELETE"
+			},
+			{
+				"id": "51d47055-d079-456c-b653-8d4f041188be",
+				"method": "DELETE"
+			},
+			{
+				"id": "b88f65a6-1400-4b80-9559-31dd7f8c42b3",
+				"method": "DELETE"
+			},
+			{
+				"id": "1b298c19-d540-4c39-981f-9e7131804a7a",
+				"method": "GET"
+			},
+			{
+				"id": "9fb28a5e-ba23-4a84-b86d-40a6439870a9",
+				"method": "DELETE"
+			},
+			{
+				"id": "3213b89b-3332-4bb4-8e9a-822171bddfd7",
+				"method": "DELETE"
+			},
+			{
+				"id": "23d12d2b-1089-4d66-8845-869f86b2c3de",
+				"method": "DELETE"
+			},
+			{
+				"id": "d87a9d42-ff41-4009-ac3c-bf0338611cd4",
+				"method": "GET"
+			},
+			{
+				"id": "3d5dd05f-1ed6-4cba-a24f-0804e967c90b",
+				"method": "POST"
+			},
+			{
+				"id": "af58cfb6-abed-4895-800d-00dde3dbca7c",
+				"method": "POST"
+			},
+			{
+				"id": "3274cbca-042b-4901-8d7b-e7e0817ac227",
+				"method": "POST"
+			},
+			{
+				"id": "7c81c183-39c7-4f35-9433-81392f1994cf",
+				"method": "POST"
+			},
+			{
+				"id": "ec31e3cb-ea82-4f06-bf6c-38eda417bcc1",
+				"method": "POST"
+			},
+			{
+				"id": "b0078706-637d-4849-a9a0-0a99d7e0ee86",
+				"method": "POST"
+			},
+			{
+				"id": "d3618cb3-c148-48e1-b652-524dbe41f9bc",
+				"method": "POST"
+			},
+			{
+				"id": "9b50f64d-f787-4b1e-9010-24c3d9a8ec81",
+				"method": "POST"
+			},
+			{
+				"id": "da38d26c-d0dd-4469-bdce-652e249561e9",
+				"method": "POST"
+			},
+			{
+				"id": "4a28588d-e3c9-45c1-a5f4-a16216d63218",
+				"method": "DELETE"
+			},
+			{
+				"id": "4b2ec723-8fde-42e7-9e7a-63f609bf19fc",
+				"method": "GET"
+			},
+			{
+				"id": "99dee883-3428-4ddd-981f-eb3f6c431f96",
+				"method": "GET"
+			},
+			{
+				"id": "3d156c03-db44-493f-9305-f9762f02e008",
+				"method": "GET"
+			},
+			{
+				"id": "fc4be5bf-ce06-4a63-a222-e6ee795a7918",
+				"method": "GET"
+			},
+			{
+				"id": "12f362e9-199c-451a-8038-2a39b2a20fcc",
+				"method": "DELETE"
+			},
+			{
+				"id": "2f1b6dbd-f1e2-4907-a2ee-68239c534ea8",
+				"method": "GET"
+			},
+			{
+				"id": "7de18680-8a31-44bd-8dce-76e72894426f",
+				"method": "POST"
+			},
+			{
+				"id": "6148e96f-0d84-4220-a5b2-fc320ed0b17f",
+				"method": "POST"
+			},
+			{
+				"id": "a454cbb6-848f-4785-87d8-08fdcd114256",
+				"method": "POST"
+			},
+			{
+				"id": "bf13b8a0-2fc5-4372-bd2e-8cf6b02d85f8",
+				"method": "POST"
+			},
+			{
+				"id": "05750e9d-fa20-4f2b-964a-2b61dc01c2b7",
+				"method": "POST"
+			},
+			{
+				"id": "f0e8ce5e-c4a5-4a8d-a741-0f85701f8e79",
+				"method": "POST"
+			},
+			{
+				"id": "dccce00e-003e-4a7f-903c-14f936e882a7",
+				"method": "POST"
+			},
+			{
+				"id": "f81025a4-db76-477c-8b26-68713f1b3783",
+				"method": "POST"
+			},
+			{
+				"id": "252fbe3a-875c-43d0-b000-5ea5969e69fa",
+				"method": "POST"
+			},
+			{
+				"id": "9d0b9445-6d09-4906-b004-f69879b6b90c",
+				"method": "POST"
+			},
+			{
+				"id": "e86beadf-79c9-4852-96c5-5acbd5935f29",
+				"method": "POST"
+			},
+			{
+				"id": "8c2699f8-4c64-4991-b9a5-1ac5c58efb97",
+				"method": "POST"
+			},
+			{
+				"id": "64aa8c3e-f2e3-465d-afbb-0fb4bc381179",
+				"method": "GET"
+			},
+			{
+				"id": "6eda494e-3209-45e3-943f-4d0a3d6ce8ee",
+				"method": "POST"
+			},
+			{
+				"id": "cd0d7e65-eac2-40e3-8149-b038bdce2ec9",
+				"method": "POST"
+			},
+			{
+				"id": "7baf5d1c-79bf-490c-9f2e-09585bfb559d",
+				"method": "GET"
+			},
+			{
+				"id": "6fed845a-7c03-4b49-8d5d-74062e665eb1",
+				"method": "DELETE"
+			},
+			{
+				"id": "3747e50d-1863-4cd3-bff1-27ee56b13dd6",
+				"method": "DELETE"
+			},
+			{
+				"id": "1302687a-e60a-4382-a5c8-1e1fa7d7bc5c",
+				"method": "DELETE"
+			},
+			{
+				"id": "37cf0b9c-8aa0-471b-a6d4-c1fdd32ee76d",
+				"method": "DELETE"
+			},
+			{
+				"id": "e1386499-fa84-45d9-ba92-afcde9bb25a8",
+				"method": "GET"
+			},
+			{
+				"id": "86d23960-46a8-4139-85ce-6f2405ea99ea",
+				"method": "POST"
+			},
+			{
+				"id": "a4c64bf8-335a-48cd-b1a2-3144e3499909",
+				"method": "DELETE"
+			},
+			{
+				"id": "03785ca6-4aff-41fa-8b27-83f446ea130a",
+				"method": "POST"
+			},
+			{
+				"id": "3847619a-0718-4fb6-a113-4eecb72b1ccb",
+				"method": "POST"
+			},
+			{
+				"id": "fa9ea6e5-673a-4797-bdd7-329d7c87ec81",
+				"method": "POST"
+			},
+			{
+				"id": "0569dd09-036a-4860-8369-083ce806927b",
+				"method": "POST"
+			},
+			{
+				"id": "93eaf104-c705-4845-b584-350b99a92a26",
+				"method": "POST"
+			},
+			{
+				"id": "a6391d56-5ed5-4056-b4fb-84412cc0bedd",
+				"method": "POST"
+			},
+			{
+				"id": "54b8934a-23bf-44ab-ad52-ef7afe8b2462",
+				"method": "POST"
+			},
+			{
+				"id": "f6e64da3-147c-44d5-9715-e0e706a15d9c",
+				"method": "POST"
+			},
+			{
+				"id": "4627f1e5-4093-4906-9a15-ddc6c85d3ed9",
+				"method": "POST"
+			},
+			{
+				"id": "fa679bc6-e53c-4395-bcd5-f5f7db5d522e",
+				"method": "DELETE"
+			},
+			{
+				"id": "57b8c997-6b1c-4bce-ac1a-413177bea191",
+				"method": "POST"
+			},
+			{
+				"id": "912aff2a-c6c1-49ce-afea-944c077b1bf4",
+				"method": "POST"
+			},
+			{
+				"id": "4f5219a7-28a3-443c-8fb3-2375a64dc038",
+				"method": "POST"
+			},
+			{
+				"id": "96d414d1-6537-46de-829c-a7269d5e2120",
+				"method": "POST"
+			},
+			{
+				"id": "966eb355-78cf-4a58-81f6-0a1d7b82f6af",
+				"method": "POST"
+			},
+			{
+				"id": "f9f7c7a2-59bd-4c32-8d0f-80baf0693788",
+				"method": "DELETE"
+			},
+			{
+				"id": "47a7e63b-c3a3-4860-951f-5544f9201629",
+				"method": "POST"
+			},
+			{
+				"id": "502aecb6-df03-4d74-9f3b-511a2118c09e",
+				"method": "GET"
+			},
+			{
+				"id": "d1218fae-6dcf-4ae1-b749-21750f2fd57c",
+				"method": "POST"
+			},
+			{
+				"id": "99bae273-9059-487d-96ad-a713e2de4e44",
+				"method": "POST"
+			},
+			{
+				"id": "9d4cd391-b233-4a7e-a5f8-d9869e88f368",
+				"method": "POST"
+			},
+			{
+				"id": "703fe695-4e28-44ba-b5bc-c1e5f45e9fca",
+				"method": "GET"
+			},
+			{
+				"id": "1446e177-33f5-4ea0-b19d-cc3177991d19",
+				"method": "POST"
+			},
+			{
+				"id": "42d5bd3a-d40d-4caf-bdf7-31229a2d0779",
+				"method": "POST"
+			},
+			{
+				"id": "d9197a4f-0ab7-4cf4-8510-82cd588a0194",
+				"method": "POST"
+			},
+			{
+				"id": "fd57be94-189f-432c-b3dc-25c0569fc471",
+				"method": "POST"
+			},
+			{
+				"id": "a627639e-1949-4e87-90c4-67bf426e6d8f",
+				"method": "POST"
+			},
+			{
+				"id": "f397e4f0-bd6e-40b7-bb1f-2177750936c1",
+				"method": "POST"
+			},
+			{
+				"id": "2e8d0df5-2bfc-4128-b72f-a6258afb6565",
+				"method": "POST"
+			},
+			{
+				"id": "df9c3733-78d6-40ec-a0a0-bd9afa14d3bc",
+				"method": "POST"
+			},
+			{
+				"id": "faa68aa3-20af-47c4-b397-623cd7e32297",
+				"method": "POST"
+			},
+			{
+				"id": "d11ce0c4-1e23-4808-ac52-21380689e828",
+				"method": "POST"
+			},
+			{
+				"id": "ee3ba0be-49ef-4a36-9af0-87c3df3a26a2",
+				"method": "GET"
+			},
+			{
+				"id": "2fee264c-0876-403b-8136-fb3d2501a8b8",
+				"method": "DELETE"
+			},
+			{
+				"id": "1d749085-c8b6-4406-82e0-5cb66b49ed88",
+				"method": "GET"
+			},
+			{
+				"id": "52641713-0c71-4ba9-b29b-d841431999f8",
+				"method": "GET"
+			}
+		]
+	}
+}

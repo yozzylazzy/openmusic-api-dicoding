@@ -31,6 +31,7 @@ UPDATE V3 For Submisi Dicoding 3 Fundamental Back-End :
 - Caching AlbumLikes Service
 - Revisi Code Sesuai Masukan dan Menyelesaikan Optional Task di v1 dan v2 (Schema Joi, Services, eslint dangle, dan rowCount)
 
+NOTES: Upload Testing di Postman harus dijalankan secara manual karena belum support
 
 Command to Reset DB :
 TRUNCATE songs,albums,collaborations, playlists, playlistsongs, users, authentications, playlist_song_activities, user_album_likes

@@ -38,7 +38,7 @@ class UserAlbumLikesService {
     try {
       const result = await this._cacheService.get(`like:${albumId}`);
       return {
-        likes: JSON.parse(result.rowsCount),
+        likes: JSON.parse(result),
         cached: true,
       };
     } catch (error) {
@@ -47,7 +47,7 @@ class UserAlbumLikesService {
         values: [albumId],
       };
       const result = await this._pool.query(query);
-      await this._cacheService.set(`like:${albumId}`, JSON.stringify(result.rows));
+      await this._cacheService.set(`like:${albumId}`, JSON.stringify(result.rowCount));
       return {
         likes: result.rowCount,
       };
